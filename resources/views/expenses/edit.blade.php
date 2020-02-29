@@ -28,7 +28,7 @@
                                 <div class="form-group{{ $errors->has('expenseCategories') ? ' has-danger' : '' }}">
                                     <label class="form-control-label" for="input-expenseCategories">{{ __('Expense Categories') }}</label>
                                     <select name="expense_category_id" class="form-control">
-
+                                        <option selected="false">Select Expense Category</option>
                                         @foreach($expenseCategories as $expenseCategory)
                                             <option value="{{ $expenseCategory->id }}" {!! ($expense->expense_category_id==$expenseCategory->id?"selected":"") !!}>{{ $expenseCategory->title }}</option>
                                         @endforeach
@@ -43,7 +43,7 @@
                                 <div class="form-group{{ $errors->has('account_id') ? ' has-danger' : '' }}">
                                     <label class="form-control-label" for="input-account_id">{{ __('Accounts') }}</label>
                                     <select name="account_id" class="form-control">
-
+                                        <option selected="false">Select Account</option>
                                         @foreach($accounts as $account)
                                             <option value="{{ $account->id }}" {!! ($expense->account_id==$account->id?"selected":"") !!}>{{ $account->title }}</option>
                                         @endforeach

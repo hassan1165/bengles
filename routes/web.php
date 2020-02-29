@@ -18,6 +18,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::resource('configVariable', 'ConfigVariableController');
+Route::resource('config', 'ConfigController');
+
 
 Route::resource('accounts', 'AccountController');
 
@@ -45,6 +48,9 @@ Route::resource('transactions', 'TransactionController');
 
 Route::group(['middleware' => 'auth'], function () {
 	Route::resource('user', 'UserController', ['except' => ['show']]);
+
+	Route::resource('configVariable', 'ConfigVariableController');
+	Route::resource('config', 'ConfigController');
 
 
 	Route::resource('accounts', 'AccountController');

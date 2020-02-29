@@ -25,6 +25,7 @@
                             <h6 class="heading-small text-muted mb-4">{{ __('Washing information') }}</h6>
                             <div class="pl-lg-4">
                                 <div class="form-group{{ $errors->has('date') ? ' has-danger' : '' }}">
+                                    <label class="form-control-label" for="input-washing_date">{{ __('Washing Date') }}</label>
                                     <div class="input-group input-group-alternative">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
@@ -36,7 +37,7 @@
                                 <div class="form-group{{ $errors->has('customer_id') ? ' has-danger' : '' }}">
                                     <label class="form-control-label" for="input-customer_id">{{ __('Customers') }}</label>
                                     <select name="customer_id" class="form-control">
-
+                                        <option selected="false">Select Customer</option>
                                         @foreach($customers as $customer)
                                             <option value="{{ $customer->id }}" {!! ($washing->customer_id==$customer->id ? "selected": "") !!}>{{ $customer->name }}</option>
                                         @endforeach

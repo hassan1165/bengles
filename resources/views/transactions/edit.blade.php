@@ -29,7 +29,7 @@
                                 <div class="form-group{{ $errors->has('account_id') ? ' has-danger' : '' }}">
                                     <label class="form-control-label" for="input-account_id">{{ __('Accounts') }}</label>
                                     <select name="account_id" class="form-control">
-
+                                        <option selected="false">Select Account</option>
                                         @foreach($accounts as $account)
                                             <option value="{{ $account->id }}" {!! ($transaction->account_id==$account->id?"selected":"") !!}>{{ $account->title }}</option>
                                         @endforeach

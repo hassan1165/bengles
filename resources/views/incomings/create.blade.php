@@ -24,6 +24,7 @@
                             <h6 class="heading-small text-muted mb-4">{{ __('Incoming information') }}</h6>
                             <div class="pl-lg-4">
                                 <div class="form-group{{ $errors->has('date') ? ' has-danger' : '' }}">
+                                    <label class="form-control-label" for="input-incoming_date">{{ __('Incoming Date') }}</label>
                                     <div class="input-group input-group-alternative">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
@@ -35,7 +36,7 @@
                                 <div class="form-group{{ $errors->has('customer_id') ? ' has-danger' : '' }}">
                                     <label class="form-control-label" for="input-customer_id">{{ __('Customers') }}</label>
                                     <select name="customer_id" class="form-control">
-
+                                        <option selected="false">Select Customer</option>
                                         @foreach($customers as $customer)
                                             <option value="{{ $customer->id }}">{{ $customer->name }}</option>
                                         @endforeach
@@ -50,7 +51,7 @@
                                 <div class="form-group{{ $errors->has('labour_id') ? ' has-danger' : '' }}">
                                     <label class="form-control-label" for="input-labour_id">{{ __('Labours') }}</label>
                                     <select name="labour_id" class="form-control">
-
+                                        <option selected="false">Select Labour</option>
                                         @foreach($labours as $labour)
                                             <option value="{{ $labour->id }}">{{ $labour->name }}</option>
                                         @endforeach

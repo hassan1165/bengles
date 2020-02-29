@@ -24,7 +24,7 @@ class AccountController extends Controller
                 );
         }
 
-        $accounts = Account::paginate(10);
+        $accounts = Account::paginate(5);
 
         return view('accounts.index')->with([
             'accounts' => $accounts

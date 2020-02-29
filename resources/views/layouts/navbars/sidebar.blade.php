@@ -6,7 +6,7 @@
         </button>
         <!-- Brand -->
         <a class="navbar-brand pt-0" href="{{ route('home') }}">
-            <img src="{{ asset('argon') }}/img/brand/blue.png" class="navbar-brand-img" alt="...">
+            <span style="font-size: 40px; color: Blue;"><b>Bengles</b></span>
         </a>
         <!-- User -->
         <ul class="nav align-items-center d-md-none">
@@ -74,7 +74,7 @@
                 <li class="nav-item">
                     <a class="nav-link active" href="#navbar-examples" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-examples">
                         <i class="fab fa-laravel" style="color: #f4645f;"></i>
-                        <span class="nav-link-text" style="color: #f4645f;">{{ __('Menus') }}</span>
+                        <span class="nav-link-text" style="color: #f4645f;">{{ __('Dashboard Settings') }}</span>
                     </a>
 
                     <div class="collapse show" id="navbar-examples">
@@ -86,111 +86,123 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('user.index') }}">
-                                    {{ __('User Management') }}
+                                    {{ __('User') }}
                                 </a>
                             </li>
 
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('accounts.index') }}">
-                                    {{ __('Account Management') }}
-                                </a>
-                            </li>
+                        </ul>
+                    </div>
+                </li>
 
 
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="#bengles-settings" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-examples">
+                        <i class="fab fa-laravel" style="color: #f4645f;"></i>
+                        <span class="nav-link-text" style="color: #f4645f;">{{ __('Bengles Settings') }}</span>
+                    </a>
+
+                    <div class="collapse" id="bengles-settings">
+                        <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('colors.index') }}">
-                                    {{ __('Color Management') }}
+                                    {{ __('Color') }}
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('sizes.index') }}">
-                                    {{ __('Size Management') }}
+                                    {{ __('Size') }}
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('designs.index') }}">
-                                    {{ __('Design Management') }}
-                                </a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('customers.index') }}">
-                                    {{ __('Customer Management') }}
+                                    {{ __('Design') }}
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('labours.index') }}">
-                                    {{ __('Labour Management') }}
-                                </a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('incomings.index') }}">
-                                    {{ __('Incoming Management') }}
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('incomingItems.index') }}">
-                                    {{ __('Incoming Items Management') }}
-                                </a>
-                            </li>
-
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('washings.index') }}">
-                                    {{ __('Washing Management') }}
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('washingItems.index') }}">
-                                    {{ __('Washing Items Management') }}
-                                </a>
-                            </li>
-
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('deliveries.index') }}">
-                                    {{ __('Delivery Management') }}
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('deliveryItems.index') }}">
-                                    {{ __('Delivery Items Management') }}
-                                </a>
-                            </li>
-
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('customerPayments.index') }}">
-                                    {{ __('Customer Payments Management') }}
-                                </a>
-                            </li>
-
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('expenseCategory.index') }}">
-                                    {{ __('Expense Category Management') }}
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('expenses.index') }}">
-                                    {{ __('Expense Management') }}
-                                </a>
-                            </li>
-
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('transactions.index') }}">
-                                    {{ __('Transaction Management') }}
+                                    {{ __('Labour') }}
                                 </a>
                             </li>
                         </ul>
                     </div>
                 </li>
 
-            </ul>
 
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="#bengles-menufacturing" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-examples">
+                        <i class="fab fa-laravel" style="color: #f4645f;"></i>
+                        <span class="nav-link-text" style="color: #f4645f;">{{ __('Bengles Manufacturing') }}</span>
+                    </a>
+
+                    <div class="collapse" id="bengles-menufacturing">
+                        <ul class="nav nav-sm flex-column">
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('incomings.index') }}">
+                                    {{ __('Incoming') }}
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('washings.index') }}">
+                                    {{ __('Washing') }}
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('deliveries.index') }}">
+                                    {{ __('Delivery') }}
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="#accounts" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-examples">
+                        <i class="fab fa-laravel" style="color: #f4645f;"></i>
+                        <span class="nav-link-text" style="color: #f4645f;">{{ __('Accounts') }}</span>
+                    </a>
+
+                    <div class="collapse" id="accounts">
+                        <ul class="nav nav-sm flex-column">
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('customers.index') }}">
+                                    {{ __('Customer') }}
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('customerPayments.index') }}">
+                                    {{ __('Customer Payments') }}
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('transactions.index') }}">
+                                    {{ __('Transaction') }}
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('accounts.index') }}">
+                                    {{ __('Account') }}
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('expenses.index') }}">
+                                    {{ __('Expense') }}
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('expenseCategory.index') }}">
+                                    {{ __('Expense Category') }}
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
 </nav>

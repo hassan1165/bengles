@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app', ['home' => true])
 
 @section('content')
     @include('layouts.headers.cards')

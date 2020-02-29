@@ -28,7 +28,7 @@
                                 <div class="form-group{{ $errors->has('customer_id') ? ' has-danger' : '' }}">
                                     <label class="form-control-label" for="input-customer_id">{{ __('Customers') }}</label>
                                     <select name="customer_id" class="form-control">
-
+                                        <option selected="false">Select Customer</option>
                                         @foreach($customers as $customer)
                                             <option value="{{ $customer->id }}">{{ $customer->name }}</option>
                                         @endforeach
